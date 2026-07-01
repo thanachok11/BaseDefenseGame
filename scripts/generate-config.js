@@ -9,6 +9,18 @@ const PUBLIC = path.join(ROOT, 'public');
 const DEPLOY_FILES = ['index.html', 'style.css', 'game.js', 'kingshot-session.js'];
 const DEPLOY_DIRS = ['assets'];
 
+function sanitizeEnvValue(value) {
+  let v = value.trim();
+  if (v.endsWith(';')) v = v.slice(0, -1).trim();
+  if (
+    (v.startsWith('"') && v.endsWith('"')) ||
+    (v.startsWith("'") && v.endsWith("'"))
+  ) {
+    v = v.slice(1, -1).trim();
+  }
+  return v;
+}
+
 function loadEnvFile() {
   const envPath = path.join(ROOT, '.env');
   if (!fs.existsSync(envPath)) return;
@@ -21,14 +33,7 @@ function loadEnvFile() {
     if (idx === -1) continue;
 
     const key = trimmed.slice(0, idx).trim();
-    let value = trimmed.slice(idx + 1).trim();
-
-    if (
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
-      value = value.slice(1, -1);
-    }
+    const value = sanitizeEnvValue(trimmed.slice(idx + 1));
 
     if (!process.env[key]) process.env[key] = value;
   }
@@ -51,13 +56,22 @@ function copyDir(src, dest) {
 
 loadEnvFile();
 
-const url = process.env.SUPABASE_URL;
-const key = process.env.SUPABASE_ANON_KEY;
+const url = sanitizeEnvValue(process.env.SUPABASE_URL || '');
+const key = sanitizeEnvValue(process.env.SUPABASE_ANON_KEY || '');
 
 if (!url || !key) {
   console.error('Missing SUPABASE_URL or SUPABASE_ANON_KEY.');
   console.error('Local: copy .env.example to .env and fill in values.');
   console.error('Vercel: add both variables in Project Settings → Environment Variables.');
+  process.exit(1);
+}
+
+try {
+  const parsed = new URL(url);
+  if (!['http:', 'https:'].includes(parsed.protocol)) throw new Error('bad protocol');
+} catch {
+  console.error(`Invalid SUPABASE_URL: ${JSON.stringify(url)}`);
+  console.error('Use: https://your-project.supabase.co (no quotes, no semicolon)');
   process.exit(1);
 }
 
