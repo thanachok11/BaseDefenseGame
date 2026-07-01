@@ -176,21 +176,35 @@ const Auth = {
     return { ok: true };
   },
 
+  _LEADERBOARD_RPC_KEY: 'kls_leaderboard_rpc_ok',
+
   async getLeaderboard(limit = 5) {
     const db = this._db();
     if (!db.ok) return { ok: false, rows: [], msg: db.msg };
 
     const cap = Math.max(1, Math.min(limit, 50));
-    const { data, error } = await db.client.rpc('get_leaderboard', { p_limit: cap });
+    const rpcKnownMissing = sessionStorage.getItem(this._LEADERBOARD_RPC_KEY) === '0';
 
-    if (!error) return { ok: true, rows: data || [] };
+    if (!rpcKnownMissing) {
+      const { data, error } = await db.client.rpc('get_leaderboard', { p_limit: cap });
+      if (!error) {
+        sessionStorage.setItem(this._LEADERBOARD_RPC_KEY, '1');
+        return { ok: true, rows: data || [] };
+      }
 
-    const missingRpc = error.code === 'PGRST202'
-      || (error.message || '').includes('get_leaderboard')
-      || (error.message || '').includes('Could not find the function');
-    if (missingRpc) return this._getLeaderboardFallback(cap);
+      const missingRpc = error.code === 'PGRST202'
+        || error.status === 404
+        || (error.message || '').includes('get_leaderboard')
+        || (error.message || '').includes('Could not find the function');
+      if (missingRpc) {
+        sessionStorage.setItem(this._LEADERBOARD_RPC_KEY, '0');
+        return this._getLeaderboardFallback(cap);
+      }
 
-    return { ok: false, rows: [], msg: error.message };
+      return { ok: false, rows: [], msg: error.message };
+    }
+
+    return this._getLeaderboardFallback(cap);
   },
 
   async _getLeaderboardFallback(limit) {
