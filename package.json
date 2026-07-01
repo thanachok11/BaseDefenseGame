@@ -1,0 +1,7 @@
+{
+  "name": "kingshot-forest-defense",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-config.js"
+  }
+}

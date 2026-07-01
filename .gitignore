@@ -3,3 +3,5 @@
 *.log
 .env
 .env.*
+!.env.example
+supabase-config.js

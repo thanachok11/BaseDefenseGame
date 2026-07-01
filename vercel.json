@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "kingshot-forest-defense",
+  "buildCommand": "npm run build",
   "headers": [
     {
       "source": "/(.*)",
