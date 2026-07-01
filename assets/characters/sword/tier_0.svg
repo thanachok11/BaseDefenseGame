@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- เงาใต้เท้า (Flat Shadow สีเทาอ่อน) -->
+  <ellipse cx="50" cy="85" rx="18" ry="7" fill="rgba(0,0,0,0.15)" />
+
+  <!-- ดาบ (Sword) ด้านหลังมือขวา -->
+  <!-- ปลายดาบ -->
+  <path d="M 68 30 L 70 25 L 72 30 Z" fill="#CBD5E1" />
+  <!-- ใบมีด -->
+  <rect x="68" y="30" width="4" height="25" fill="#CBD5E1" />
+  <!-- กระบังดาบ (Crossguard) สีทอง -->
+  <rect x="65" y="55" width="10" height="3" rx="1" fill="#F59E0B" />
+  <!-- ด้ามจับ -->
+  <rect x="69" y="58" width="2" height="8" fill="#4B5563" />
+
+  <!-- ลำตัว/ชุดเกราะเบา (Light Armor - สีขาวครีมดูสะอาดตา) -->
+  <rect x="35" y="45" width="30" height="30" rx="6" fill="#F8FAFC" />
+  <!-- เข็มขัด -->
+  <rect x="35" y="65" width="30" height="4" fill="#9CA3AF" />
+  <rect x="47" y="63" width="6" height="8" rx="1" fill="#F59E0B" />
+
+  <!-- แขนขวาถือดาบ -->
+  <circle cx="70" cy="62" r="5" fill="#fcdbb6" /> <!-- มือ -->
+
+  <!-- แขนซ้ายถือโล่ -->
+  <!-- โล่กลม (Round Shield) ขอบเงิน ตรงกลางสีเขียวประจำทีม #10B981 -->
+  <circle cx="28" cy="60" r="12" fill="#9CA3AF" />
+  <circle cx="28" cy="60" r="9" fill="#10B981" />
+  <circle cx="28" cy="60" r="3" fill="#E5E7EB" /> <!-- หมุดโล่ -->
+
+  <!-- หัว / ใบหน้า (Skin tone เดียวกับพระราชา) -->
+  <circle cx="50" cy="38" r="15" fill="#fcdbb6" />
+  
+  <!-- ตา -->
+  <circle cx="45" cy="36" r="2.5" fill="#333333" />
+  <circle cx="55" cy="36" r="2.5" fill="#333333" />
+
+  <!-- หมวกเกราะเหล็กแบบครึ่งหัว (Infantry Helmet) -->
+  <path d="M 35 38 Q 50 15 65 38 Z" fill="#E2E8F0" />
+  <rect x="33" y="38" width="34" height="6" rx="2" fill="#9CA3AF" />
+  <!-- ขนนกประดับหมวกสีเขียวให้เข้าธีม -->
+  <path d="M 50 20 Q 55 10 60 18 Q 55 22 50 20 Z" fill="#10B981" />
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- เงาใต้ฐานอาคาร (Flat Shadow) -->
+  <ellipse cx="50" cy="92" rx="42" ry="10" fill="rgba(0,0,0,0.15)" />
+
+  <!-- ฐานหิน (Stone Base Pad) -->
+  <path d="M 10 82 L 10 86 Q 50 100 90 86 L 90 82 Z" fill="#78716C" />
+  <ellipse cx="50" cy="82" rx="40" ry="12" fill="#9CA3AF" />
+
+  <!-- ผนังไม้หลักของอาคาร (Wooden Walls) -->
+  <rect x="25" y="45" width="50" height="35" fill="#92400E" />
+  
+  <!-- ลายไม้บนผนัง (Wood Planks Detail) -->
+  <path d="M 35 45 L 35 80 M 45 45 L 45 80 M 55 45 L 55 80 M 65 45 L 65 80" stroke="#78350F" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- โครงหลังคาด้านหลัง (Back Roof Structure) -->
+  <polygon points="15,45 50,10 85,45" fill="#78350F" />
+
+  <!-- หน้าจั่วอาคารไม้ (Front Gable) -->
+  <polygon points="25,45 50,20 75,45" fill="#92400E" />
+  <line x1="50" y1="20" x2="50" y2="45" stroke="#78350F" stroke-width="1.5" />
+  <line x1="40" y1="30" x2="40" y2="45" stroke="#78350F" stroke-width="1.5" />
+  <line x1="60" y1="30" x2="60" y2="45" stroke="#78350F" stroke-width="1.5" />
+
+  <!-- ขอบหลังคาสีทอง (Gold Accent Roof Trim) -->
+  <path d="M 12 48 L 50 10 L 88 48 L 82 52 L 50 20 L 18 52 Z" fill="#EAB308" />
+
+  <!-- กรอบประตูและช่องประตูมืด (Door & Frame) -->
+  <path d="M 38 80 L 38 58 Q 50 52 62 58 L 62 80 Z" fill="#B45309" />
+  <path d="M 40 80 L 40 60 Q 50 55 60 60 L 60 80 Z" fill="#431407" />
+  <!-- เงาด้านในประตู -->
+  <path d="M 40 60 Q 50 55 60 60 L 60 65 Q 50 60 40 65 Z" fill="#290E04" />
+
+  <!-- คันธนูประดับเหนือประตู (Bow hung on Gable) -->
+  <path d="M 38 40 Q 50 28 62 40" fill="none" stroke="#EAB308" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="39" y1="39" x2="61" y2="39" stroke="#E2E8F0" stroke-width="1" />
+
+  <!-- ซองใส่ลูกธนู (Quiver) วางพิงกำแพงด้านซ้าย -->
+  <rect x="22" y="65" width="8" height="15" rx="1.5" fill="#78350F" />
+  <rect x="22" y="67" width="8" height="3" fill="#EAB308" /> <!-- ขอบทองซองธนู -->
+  
+  <!-- ลูกธนูในซอง (Arrows in Quiver) -->
+  <line x1="26" y1="65" x2="23" y2="52" stroke="#CBD5E1" stroke-width="1.5" />
+  <line x1="26" y1="65" x2="29" y2="50" stroke="#CBD5E1" stroke-width="1.5" />
+  <!-- ขนนกสีเขียว (Green Feathers) -->
+  <circle cx="23" cy="52" r="2.5" fill="#10B981" />
+  <circle cx="29" cy="50" r="2.5" fill="#10B981" />
+
+  <!-- เป้าซ้อมยิงธนู (Archery Target Board) ทางด้านขวา -->
+  <!-- ขาตั้งเป้าไม้ -->
+  <line x1="73" y1="80" x2="71" y2="88" stroke="#78350F" stroke-width="2" stroke-linecap="round" />
+  <line x1="83" y1="80" x2="85" y2="88" stroke="#78350F" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- แป้นเป้าไม้และลวดลาย -->
+  <circle cx="78" cy="74" r="14" fill="#B45309" />
+  <circle cx="78" cy="74" r="12" fill="#F8FAFC" /> <!-- พื้นขาว -->
+  <circle cx="78" cy="74" r="8" fill="#EF4444" /> <!-- วงแดง -->
+  <circle cx="78" cy="74" r="4" fill="#EAB308" /> <!-- เป้าเหลือง/ทอง (Bullseye) -->
+  
+  <!-- ลูกธนูที่ปักเข้าเป้าอย่างแม่นยำ -->
+  <line x1="90" y1="60" x2="79" y2="71" stroke="#CBD5E1" stroke-width="1.5" />
+  <circle cx="90" cy="60" r="2.5" fill="#10B981" />
+  <circle cx="92" cy="58" r="1.5" fill="#10B981" />
+</svg>

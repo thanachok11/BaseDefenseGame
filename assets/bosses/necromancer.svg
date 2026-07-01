@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <ellipse cx="60" cy="105" rx="25" ry="10" fill="none" stroke="#7F1D1D" stroke-width="4" />
+  <ellipse cx="60" cy="105" rx="15" ry="5" fill="none" stroke="#DC2626" stroke-width="2" />
+  <!-- คทาหัวกะโหลก/คริสตัลเลือด -->
+  <rect x="85" y="20" width="4" height="70" fill="#111827" />
+  <path d="M 87 10 L 95 25 L 87 35 L 79 25 Z" fill="#DC2626" />
+  <!-- ชุดคลุมนักเวทดำ -->
+  <path d="M 40 75 L 45 40 L 75 40 L 80 75 Q 60 90 40 75 Z" fill="#111827" />
+  <path d="M 50 40 L 70 40 L 60 80 Z" fill="#7F1D1D" />
+  <!-- หมวกฮู้ดลึก -->
+  <path d="M 45 40 Q 60 10 75 40 Z" fill="#111827" />
+  <!-- ตาสีแดงในความมืด -->
+  <circle cx="55" cy="32" r="2.5" fill="#EF4444" />
+  <circle cx="65" cy="32" r="2.5" fill="#EF4444" />
+</svg>

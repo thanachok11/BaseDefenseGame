@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- เงาใต้ฐาน (Flat Shadow) -->
+  <ellipse cx="50" cy="86" rx="35" ry="10" fill="rgba(0,0,0,0.15)" />
+
+  <!-- โครงสร้างฐานศิลา (Slate Stone Fortress Base) -->
+  <path d="M 20 55 L 20 80 Q 50 92 80 80 L 80 55 Z" fill="#334155" />
+  
+  <!-- เสาหินเสริมความแข็งแกร่ง (Fortress Buttresses) -->
+  <!-- เสาซ้าย -->
+  <path d="M 16 55 L 24 55 L 26 83 L 18 78 Z" fill="#1E293B" />
+  <!-- เสาขวา -->
+  <path d="M 84 55 L 76 55 L 74 83 L 82 78 Z" fill="#1E293B" />
+  <!-- เสากลางหน้า -->
+  <path d="M 44 61 L 56 61 L 56 89 L 44 89 Z" fill="#1E293B" />
+
+  <!-- ลวดลายบล็อกหินบนฐาน (Stone Brick Outlines) -->
+  <path d="M 28 65 L 40 65 M 60 65 L 72 65 M 32 72 L 42 72 M 58 72 L 68 72" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- ขอบแพลตฟอร์มทองคำ (Golden Roof Trim) -->
+  <path d="M 18 53 L 18 58 Q 50 70 82 58 L 82 53 Q 50 65 18 53 Z" fill="#D97706" />
+  <path d="M 18 53 Q 50 65 82 53 Q 50 41 18 53 Z" fill="#FBBF24" />
+  <ellipse cx="50" cy="53" rx="28" ry="8" fill="#FEF3C7" opacity="0.3" /> <!-- ไฮไลท์แสงบนขอบทอง -->
+
+  <!-- ปืนใหญ่คู่ (Dual Cannons) -->
+  <!-- ปืนกระบอกซ้าย -->
+  <g transform="rotate(-35 30 45)">
+    <!-- ฐานยึดปืน -->
+    <rect x="25" y="35" width="20" height="15" rx="3" fill="#0F172A" />
+    <!-- ตัวปืนใหญ่ -->
+    <rect x="27" y="20" width="16" height="25" rx="3" fill="#1E293B" />
+    <rect x="29" y="20" width="12" height="25" fill="#334155" /> <!-- ไฮไลท์ -->
+    <rect x="25" y="28" width="20" height="4" fill="#D97706" /> <!-- วงแหวนทอง -->
+    <!-- ปากกระบอกปืน -->
+    <rect x="28" y="16" width="14" height="6" rx="2" fill="#0F172A" />
+    <ellipse cx="35" cy="16" rx="5" ry="2" fill="#FBBF24" opacity="0.8" /> <!-- แสงชาร์จพลังงาน -->
+  </g>
+
+  <!-- ปืนกระบอกขวา -->
+  <g transform="rotate(35 70 45)">
+    <!-- ฐานยึดปืน -->
+    <rect x="55" y="35" width="20" height="15" rx="3" fill="#0F172A" />
+    <!-- ตัวปืนใหญ่ -->
+    <rect x="57" y="20" width="16" height="25" rx="3" fill="#1E293B" />
+    <rect x="59" y="20" width="12" height="25" fill="#334155" /> <!-- ไฮไลท์ -->
+    <rect x="55" y="28" width="20" height="4" fill="#D97706" /> <!-- วงแหวนทอง -->
+    <!-- ปากกระบอกปืน -->
+    <rect x="58" y="16" width="14" height="6" rx="2" fill="#0F172A" />
+    <ellipse cx="65" cy="16" rx="5" ry="2" fill="#FBBF24" opacity="0.8" /> <!-- แสงชาร์จพลังงาน -->
+  </g>
+
+  <!-- เบ้าเสียบคริสตัลตรงกลาง (Crystal Socket) -->
+  <ellipse cx="50" cy="53" rx="14" ry="5" fill="#1E293B" />
+
+  <!-- คริสตัลเวทมนตร์ และ ออร่าสีเขียว (Glowing Green Magic Crystal & Aura) -->
+  <!-- ออร่าชั้นนอก -->
+  <circle cx="50" cy="38" r="22" fill="#10B981" opacity="0.15" />
+  <!-- ออร่าชั้นใน -->
+  <circle cx="50" cy="38" r="14" fill="#10B981" opacity="0.3" />
+  
+  <!-- ตัวคริสตัลหลัก (Emerald Crystal) -->
+  <polygon points="50,18 64,38 50,55 36,38" fill="#059669" />
+  <polygon points="50,18 58,38 50,55 42,38" fill="#10B981" />
+  <!-- แสงตกกระทบบนคริสตัล -->
+  <polygon points="50,18 50,55 42,38" fill="#34D399" />
+  <polygon points="50,22 50,50 46,38" fill="#A7F3D0" opacity="0.8" /> 
+  
+  <!-- ดาวทองคำ Max Level (Max Level Golden Star Indicator) -->
+  <circle cx="50" cy="8" r="7" fill="#FBBF24" opacity="0.3" /> <!-- ออร่ารอบดาว -->
+  <path d="M 50 3 L 51.5 7.5 L 56 7.5 L 52.5 10 L 54 14.5 L 50 12 L 46 14.5 L 47.5 10 L 44 7.5 L 48.5 7.5 Z" fill="#FBBF24" />
+</svg>

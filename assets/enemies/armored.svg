@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- เงาใต้เท้า (Flat Shadow สีเทาอ่อน) -->
+  <ellipse cx="50" cy="88" rx="28" ry="10" fill="rgba(0,0,0,0.15)" />
+
+  <!-- อาวุธขวานใหญ่ (Heavy Axe) ด้านหลัง -->
+  <rect x="75" y="20" width="6" height="70" rx="3" fill="#4B5563" />
+  <path d="M 65 30 L 81 20 L 95 35 L 81 40 Z" fill="#9CA3AF" />
+  <path d="M 81 20 L 95 35 L 81 40 Z" fill="#E5E7EB" /> <!-- ไฮไลท์ใบมีดขวาน -->
+
+  <!-- เกราะไหล่ขนาดใหญ่ (Heavy Shoulder Pads) -->
+  <circle cx="30" cy="45" r="16" fill="#4B5563" />
+  <circle cx="70" cy="45" r="16" fill="#4B5563" />
+  <circle cx="30" cy="45" r="12" fill="#B91C1C" /> <!-- แดงเข้ม -->
+  <circle cx="70" cy="45" r="12" fill="#B91C1C" />
+
+  <!-- ลำตัวชุดเกราะหนา (Main Body) -->
+  <rect x="30" y="40" width="40" height="42" rx="8" fill="#B91C1C" />
+  
+  <!-- ลวดลายแผ่นเกราะหน้าอก (Chest Plate Details) -->
+  <path d="M 35 60 L 50 72 L 65 60 L 65 45 L 35 45 Z" fill="#991B1B" />
+  
+  <!-- หมวกเกราะเหล็ก (Heavy Helmet) -->
+  <rect x="35" y="25" width="30" height="26" rx="8" fill="#4B5563" />
+  
+  <!-- ช่องมองหมวกเกราะแบบกากบาท (Cross Visor) ให้ดูน่าเกรงขาม -->
+  <rect x="40" y="32" width="20" height="6" rx="2" fill="#111827" />
+  <rect x="47" y="32" width="6" height="14" rx="2" fill="#111827" />
+
+  <!-- เขาหรือปีกหมวกเกราะ (Helmet Horns/Decorations) -->
+  <path d="M 35 30 Q 22 18 18 25 Q 28 36 35 36 Z" fill="#6B7280" />
+  <path d="M 65 30 Q 78 18 82 25 Q 72 36 65 36 Z" fill="#6B7280" />
+</svg>

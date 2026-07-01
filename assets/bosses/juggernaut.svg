@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <ellipse cx="60" cy="105" rx="40" ry="15" fill="rgba(0,0,0,0.15)" />
+  <!-- เกราะตัวที่เทอะทะ -->
+  <rect x="30" y="40" width="60" height="50" rx="15" fill="#4B5563" />
+  <rect x="35" y="45" width="50" height="40" rx="10" fill="#991B1B" />
+  <!-- โล่ยักษ์ด้านซ้าย (Tower Shield) -->
+  <path d="M 10 30 L 40 30 L 40 90 L 25 105 L 10 90 Z" fill="#1F2937" />
+  <path d="M 15 35 L 35 35 L 35 85 L 25 95 L 15 85 Z" fill="#374151" />
+  <!-- หอกหนาด้านขวา -->
+  <rect x="85" y="20" width="8" height="80" fill="#111827" />
+  <path d="M 85 20 L 89 5 L 93 20 Z" fill="#D1D5DB" />
+  <!-- หมวกเหล็กตัน -->
+  <rect x="45" y="20" width="30" height="30" rx="5" fill="#111827" />
+  <rect x="45" y="30" width="30" height="8" fill="#1F2937" />
+  <circle cx="55" cy="34" r="2" fill="#EF4444" />
+</svg>

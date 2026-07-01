@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <ellipse cx="60" cy="100" rx="20" ry="6" fill="rgba(0,0,0,0.15)" />
+  <!-- ผ้าคลุมขาดๆ สีดำ -->
+  <path d="M 40 45 L 20 90 L 50 85 Z" fill="#111827" />
+  <path d="M 80 45 L 100 90 L 70 85 Z" fill="#111827" />
+  <!-- มีดคู่เรืองแสง (Dual Crimson Daggers) -->
+  <path d="M 25 60 L 15 30 L 30 60 Z" fill="#EF4444" />
+  <path d="M 95 60 L 105 30 L 90 60 Z" fill="#EF4444" />
+  <!-- ลำตัวเพรียวบางคล่องแคล่ว -->
+  <rect x="45" y="40" width="30" height="45" rx="5" fill="#1F2937" />
+  <path d="M 45 45 L 75 45 L 60 65 Z" fill="#7F1D1D" /> <!-- ลายตัว V บนเกราะ -->
+  <!-- หัวสวมฮู้ดปิดมิดชิด -->
+  <circle cx="60" cy="30" r="14" fill="#111827" />
+  <path d="M 46 30 Q 60 10 74 30 Q 60 45 46 30 Z" fill="#4B5563" />
+  <!-- รอยบากเรืองแสงที่ตาข้างเดียว -->
+  <line x1="62" y1="25" x2="68" y2="33" stroke="#EF4444" stroke-width="3" stroke-linecap="round" />
+</svg>

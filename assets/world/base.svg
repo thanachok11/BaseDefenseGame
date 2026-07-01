@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- เงาใต้ฐาน (Flat Shadow สีเทาอ่อน) -->
+  <ellipse cx="60" cy="105" rx="45" ry="12" fill="rgba(0,0,0,0.15)" />
+  
+  <!-- โครงสร้างฐานหลัก (สีขาวครีมดูสะอาดตา เข้ากับ #E8F5E9) -->
+  <path d="M 25 100 L 25 50 L 95 50 L 95 100 Z" fill="#F8FAFC" />
+  
+  <!-- ลวดลายกำแพงหินแบบ Minimal -->
+  <rect x="35" y="60" width="15" height="8" rx="2" fill="#E2E8F0" />
+  <rect x="55" y="60" width="30" height="8" rx="2" fill="#E2E8F0" />
+  <rect x="45" y="75" width="20" height="8" rx="2" fill="#E2E8F0" />
+  <rect x="70" y="75" width="15" height="8" rx="2" fill="#E2E8F0" />
+  <rect x="30" y="85" width="25" height="8" rx="2" fill="#E2E8F0" />
+  
+  <!-- ประตูฐาน -->
+  <path d="M 45 100 L 45 80 Q 60 65 75 80 L 75 100 Z" fill="#334155" />
+  
+  <!-- หลังคาป้อมปราการ (ใช้โทนสีหลัก #10B981) -->
+  <path d="M 15 50 L 25 25 L 95 25 L 105 50 Z" fill="#10B981" />
+  <path d="M 25 25 L 45 10 L 75 10 L 95 25 Z" fill="#059669" />
+  
+  <!-- ธงบนยอดฐาน -->
+  <rect x="58" y="5" width="4" height="20" fill="#CBD5E1" />
+  <path d="M 62 5 L 85 12 L 62 19 Z" fill="#F59E0B" />
+</svg>

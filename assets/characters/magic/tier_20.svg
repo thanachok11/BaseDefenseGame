@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <ellipse cx="50" cy="85" rx="18" ry="7" fill="rgba(0,0,0,0.15)" />
+  <!-- ลูกแก้วลอยได้ -->
+  <circle cx="75" cy="45" r="12" fill="#10B981" />
+  <circle cx="72" cy="42" r="4" fill="#6EE7B7" />
+  <path d="M 65 60 Q 75 30 85 60" fill="none" stroke="#F59E0B" stroke-width="2" /> <!-- วงแหวนรอบลูกแก้ว -->
+  <!-- ชุดคลุมหรูหรา -->
+  <path d="M 25 75 L 40 40 L 60 40 L 75 75 Z" fill="#1F2937" />
+  <path d="M 40 40 L 60 40 L 50 75 Z" fill="#10B981" />
+  <circle cx="50" cy="38" r="15" fill="#fcdbb6" />
+  <circle cx="45" cy="36" r="2.5" fill="#333333" /><circle cx="55" cy="36" r="2.5" fill="#333333" />
+  <!-- หมวก Warlock -->
+  <path d="M 15 35 L 85 35 L 50 -5 Z" fill="#1F2937" />
+  <path d="M 25 35 L 75 35 L 50 -5 Z" fill="#10B981" />
+</svg>

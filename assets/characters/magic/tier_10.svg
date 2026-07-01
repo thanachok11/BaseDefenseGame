@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <ellipse cx="50" cy="85" rx="18" ry="7" fill="rgba(0,0,0,0.15)" />
+  <rect x="68" y="25" width="4" height="45" rx="2" fill="#78350F" />
+  <circle cx="70" cy="25" r="10" fill="#F59E0B" /> <!-- คริสตัลใหญ่ขึ้น -->
+  <!-- สมุดเวทลอยน้ำ -->
+  <rect x="15" y="45" width="12" height="15" fill="#F8FAFC" transform="rotate(-15 21 52)" />
+  <rect x="13" y="45" width="14" height="15" fill="#1E3A8A" transform="rotate(-15 21 52)" />
+  <!-- ชุด -->
+  <path d="M 30 75 L 40 40 L 60 40 L 70 75 Z" fill="#059669" />
+  <circle cx="50" cy="38" r="15" fill="#fcdbb6" />
+  <circle cx="45" cy="36" r="2.5" fill="#333333" /><circle cx="55" cy="36" r="2.5" fill="#333333" />
+  <path d="M 20 35 L 80 35 L 50 0 Z" fill="#10B981" /> <!-- หมวกสูงขึ้น -->
+</svg>

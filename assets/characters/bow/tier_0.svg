@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- เงาใต้เท้า (Flat Shadow สีเทาอ่อน) -->
+  <ellipse cx="50" cy="85" rx="18" ry="7" fill="rgba(0,0,0,0.15)" />
+
+  <!-- ซองใส่ลูกธนู (Quiver) สะพายไว้ด้านหลัง -->
+  <!-- ตัวซอง -->
+  <rect x="62" y="42" width="10" height="22" rx="2" transform="rotate(15 67 53)" fill="#78350F" />
+  <!-- ก้านลูกธนูที่โผล่ออกมา -->
+  <line x1="64" y1="35" x2="67" y2="45" stroke="#E2E8F0" stroke-width="2" />
+  <line x1="70" y1="37" x2="70" y2="45" stroke="#E2E8F0" stroke-width="2" />
+  <!-- ขนนกลูกธนูสีเขียว -->
+  <circle cx="63" cy="34" r="1.5" fill="#10B981" />
+  <circle cx="70" cy="36" r="1.5" fill="#10B981" />
+
+  <!-- คันธนู (Bow) ถือด้วยมือซ้าย -->
+  <path d="M 28 45 Q 15 60 28 75" fill="none" stroke="#92400E" stroke-width="4" stroke-linecap="round" />
+  <!-- สายธนู (Bowstring) -->
+  <line x1="28" y1="45" x2="28" y2="75" stroke="#CBD5E1" stroke-width="1.5" />
+
+  <!-- ลำตัวเสื้อผ้า (Light Cloth Armor - สีขาวครีม) -->
+  <rect x="35" y="45" width="30" height="30" rx="6" fill="#F8FAFC" />
+  <!-- ลายผ้าคลุมไหล่สไตล์พลธนู (สีเขียวหลักของทีม) -->
+  <path d="M 35 45 L 65 45 L 50 58 Z" fill="#10B981" />
+  
+  <!-- เข็มขัด -->
+  <rect x="35" y="65" width="30" height="4" fill="#9CA3AF" />
+  <!-- หัวเข็มขัด -->
+  <rect x="47" y="63" width="6" height="8" rx="1" fill="#F59E0B" />
+
+  <!-- แขนซ้ายถือคันธนู -->
+  <circle cx="28" cy="60" r="4.5" fill="#fcdbb6" /> <!-- มือซ้าย -->
+
+  <!-- แขนขวาเตรียมดึงสายธนู -->
+  <circle cx="68" cy="62" r="4.5" fill="#fcdbb6" /> <!-- มือขวา -->
+
+  <!-- หัว / ใบหน้า -->
+  <circle cx="50" cy="38" r="15" fill="#fcdbb6" />
+  
+  <!-- ตา -->
+  <circle cx="45" cy="36" r="2.5" fill="#333333" />
+  <circle cx="55" cy="36" r="2.5" fill="#333333" />
+
+  <!-- หมวกฮู้ดนักธนู (Archer Hood) -->
+  <path d="M 33 38 Q 50 12 67 38 Q 50 25 33 38 Z" fill="#10B981" />
+  <path d="M 35 38 Q 50 18 65 38 Z" fill="#059669" /> <!-- เลเยอร์เงาด้านในฮู้ด -->
+</svg>

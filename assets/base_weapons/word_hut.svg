@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- เงาใต้ฐานอาคาร (Flat Shadow) -->
+  <ellipse cx="50" cy="92" rx="42" ry="10" fill="rgba(0,0,0,0.15)" />
+
+  <!-- ฐานหินทรงกลม (Circular Stone Pad) -->
+  <path d="M 10 82 L 10 86 Q 50 100 90 86 L 90 82 Z" fill="#78716C" />
+  <ellipse cx="50" cy="82" rx="40" ry="12" fill="#9CA3AF" />
+
+  <!-- ผนังไม้หลักของอาคาร (Wooden Walls) -->
+  <rect x="25" y="45" width="50" height="35" fill="#92400E" />
+  
+  <!-- ลายไม้บนผนัง (Wood Planks Detail) -->
+  <path d="M 35 45 L 35 80 M 45 45 L 45 80 M 55 45 L 55 80 M 65 45 L 65 80" stroke="#78350F" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- โครงหลังคาด้านหลัง (Back Roof Structure) -->
+  <polygon points="15,45 50,10 85,45" fill="#78350F" />
+
+  <!-- หน้าจั่วอาคารไม้ (Front Gable) -->
+  <polygon points="25,45 50,20 75,45" fill="#92400E" />
+  <line x1="50" y1="20" x2="50" y2="45" stroke="#78350F" stroke-width="1.5" />
+  <line x1="40" y1="30" x2="40" y2="45" stroke="#78350F" stroke-width="1.5" />
+  <line x1="60" y1="30" x2="60" y2="45" stroke="#78350F" stroke-width="1.5" />
+
+  <!-- ขอบหลังคาสีส้ม (Orange Accent Roof Trim) -->
+  <path d="M 12 48 L 50 10 L 88 48 L 82 52 L 50 20 L 18 52 Z" fill="#F97316" />
+  <path d="M 18 52 L 50 20 L 82 52 L 76 56 L 50 30 L 24 56 Z" fill="#EA580C" opacity="0.6" /> <!-- เลเยอร์เงาใต้ขอบหลังคา -->
+
+  <!-- กรอบประตูและช่องประตูมืด -->
+  <path d="M 38 80 L 38 58 Q 50 52 62 58 L 62 80 Z" fill="#B45309" />
+  <path d="M 40 80 L 40 60 Q 50 55 60 60 L 60 80 Z" fill="#431407" />
+  <path d="M 40 60 Q 50 55 60 60 L 60 65 Q 50 60 40 65 Z" fill="#290E04" />
+
+  <!-- แบนเนอร์สีส้มเหนือประตู (Orange Banner Above Door) -->
+  <path d="M 42 22 L 58 22 L 58 36 L 50 40 L 42 36 Z" fill="#F97316" />
+  <path d="M 42 22 L 50 22 L 50 40 L 42 36 Z" fill="#EA580C" /> <!-- แสงเงาบนแบนเนอร์เพิ่มมิติ -->
+
+  <!-- ป้ายดาบไขว้บนแบนเนอร์ (Crossed Swords Sign) -->
+  <!-- ดาบเล่มที่ 1 -->
+  <line x1="45" y1="26" x2="55" y2="36" stroke="#F8FAFC" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="45" y1="26" x2="43" y2="24" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="43" y1="27" x2="46" y2="24" stroke="#FBBF24" stroke-width="1.5" /> <!-- กระบังดาบ -->
+  <!-- ดาบเล่มที่ 2 -->
+  <line x1="55" y1="26" x2="45" y2="36" stroke="#F8FAFC" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="55" y1="26" x2="57" y2="24" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="57" y1="27" x2="54" y2="24" stroke="#FBBF24" stroke-width="1.5" /> <!-- กระบังดาบ -->
+
+  <!-- โล่เหล็กวางพิงกำแพงด้านซ้าย (Iron Shield) -->
+  <ellipse cx="22" cy="76" rx="9" ry="3" fill="rgba(0,0,0,0.2)" /> <!-- เงาโล่ -->
+  <circle cx="22" cy="68" r="9" fill="#9CA3AF" />
+  <circle cx="22" cy="68" r="6" fill="#64748B" />
+  <circle cx="22" cy="68" r="2.5" fill="#CBD5E1" />
+  <!-- หมุดตกแต่งโล่ -->
+  <circle cx="17" cy="68" r="1" fill="#4B5563" />
+  <circle cx="27" cy="68" r="1" fill="#4B5563" />
+  <circle cx="22" cy="63" r="1" fill="#4B5563" />
+  <circle cx="22" cy="73" r="1" fill="#4B5563" />
+
+  <!-- ธงสีเขียวประจำทีม (Green Team Flag on Short Pole) ฝั่งขวา -->
+  <!-- เสาธง -->
+  <line x1="82" y1="80" x2="82" y2="50" stroke="#78350F" stroke-width="2.5" stroke-linecap="round" />
+  <!-- ผ้าธง -->
+  <path d="M 82 53 L 68 58 L 82 63 Z" fill="#10B981" />
+  <!-- หัวเสาธงสีทอง -->
+  <circle cx="82" cy="50" r="3" fill="#FBBF24" />
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- เงาใต้เท้า (Flat Shadow วงกว้างขึ้นสำหรับบอส) -->
+  <ellipse cx="60" cy="105" rx="35" ry="12" fill="rgba(0,0,0,0.15)" />
+
+  <!-- ผ้าคลุมยักษ์ด้านหลัง (Giant Cape - สีแดงเลือดหมู) -->
+  <path d="M 30 50 L 20 100 L 100 100 L 90 50 Z" fill="#7F1D1D" />
+
+  <!-- ดาบยักษ์ (Giant Broadsword) ด้านขวา -->
+  <rect x="85" y="20" width="8" height="80" rx="2" fill="#4B5563" />
+  <path d="M 80 20 L 89 5 L 98 20 Z" fill="#D1D5DB" />
+  <rect x="75" y="65" width="28" height="6" rx="2" fill="#F59E0B" /> <!-- การ์ดดาบสีทอง -->
+
+  <!-- เกราะไหล่ขนาดยักษ์ (Massive Shoulders) -->
+  <circle cx="35" cy="50" r="20" fill="#1F2937" />
+  <circle cx="85" cy="50" r="20" fill="#1F2937" />
+  <circle cx="35" cy="50" r="12" fill="#F59E0B" /> <!-- ขอบทอง -->
+  <circle cx="85" cy="50" r="12" fill="#F59E0B" /> <!-- ขอบทอง -->
+
+  <!-- ลำตัวชุดเกราะ (Main Heavy Body) -->
+  <rect x="35" y="45" width="50" height="50" rx="10" fill="#1F2937" />
+  <!-- ลวดลายเกราะหน้าอก (Chest Plate) -->
+  <path d="M 40 65 L 60 85 L 80 65 L 80 45 L 40 45 Z" fill="#374151" />
+
+  <!-- หมวกเกราะบอส (Boss Helmet) -->
+  <rect x="40" y="20" width="40" height="35" rx="6" fill="#111827" />
+
+  <!-- ช่องมอง/ดวงตาเรืองแสงสีแดง (Glowing Evil Eyes) -->
+  <rect x="48" y="32" width="8" height="4" rx="1" fill="#EF4444" />
+  <rect x="64" y="32" width="8" height="4" rx="1" fill="#EF4444" />
+
+  <!-- มงกุฎ/เขาบนหมวกเกราะ (Crown/Horns) -->
+  <path d="M 40 20 L 30 5 L 45 15 Z" fill="#F59E0B" />
+  <path d="M 80 20 L 90 5 L 75 15 Z" fill="#F59E0B" />
+  <path d="M 50 20 L 60 2 L 70 20 Z" fill="#F59E0B" />
+</svg>

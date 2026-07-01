@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <ellipse cx="50" cy="85" rx="22" ry="8" fill="rgba(0,0,0,0.15)" />
+  <!-- ดาบเรืองแสง -->
+  <rect x="70" y="10" width="10" height="45" fill="#10B981" /> <!-- ใบดาบสีเขียวเรืองแสง -->
+  <path d="M 70 10 L 75 0 L 80 10 Z" fill="#34D399" />
+  <rect x="64" y="55" width="22" height="6" rx="2" fill="#F59E0B" />
+  <!-- ชุดเกราะ Paladin -->
+  <rect x="35" y="40" width="30" height="35" rx="8" fill="#F8FAFC" />
+  <rect x="35" y="40" width="30" height="35" rx="8" fill="none" stroke="#F59E0B" stroke-width="3" />
+  <circle cx="35" cy="45" r="10" fill="#F59E0B" /> <!-- ไหล่ทอง -->
+  <!-- โล่ยักษ์สีทอง -->
+  <path d="M 10 40 L 40 40 L 40 70 L 25 85 L 10 70 Z" fill="#F59E0B" />
+  <path d="M 15 45 L 35 45 L 35 68 L 25 78 L 15 68 Z" fill="#F8FAFC" />
+  <!-- หมวกทองคำ -->
+  <path d="M 35 40 Q 50 15 65 40 Z" fill="#F8FAFC" stroke="#F59E0B" stroke-width="3" />
+  <path d="M 50 10 L 50 -5" stroke="#10B981" stroke-width="4" stroke-linecap="round" />
+</svg>

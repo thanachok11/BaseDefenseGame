@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <ellipse cx="60" cy="105" rx="35" ry="12" fill="rgba(0,0,0,0.15)" />
+  <!-- แขนศิลายักษ์ -->
+  <path d="M 15 45 L 35 40 L 40 60 L 20 80 Z" fill="#374151" />
+  <path d="M 105 45 L 85 40 L 80 60 L 100 80 Z" fill="#374151" />
+  <circle cx="20" cy="80" r="15" fill="#1F2937" />
+  <circle cx="100" cy="80" r="15" fill="#1F2937" />
+  <!-- ลำตัวศิลา -->
+  <path d="M 40 30 L 80 30 L 90 60 L 70 90 L 50 90 L 30 60 Z" fill="#4B5563" />
+  <!-- รอยแตกของลาวา (Lava Cracks) -->
+  <path d="M 60 30 L 55 50 L 65 60 L 60 90" fill="none" stroke="#DC2626" stroke-width="4" />
+  <path d="M 60 30 L 55 50 L 65 60 L 60 90" fill="none" stroke="#F59E0B" stroke-width="2" />
+  <!-- แกนกลางเรืองแสง (Core) -->
+  <circle cx="60" cy="60" r="8" fill="#EF4444" />
+  <circle cx="60" cy="60" r="4" fill="#FEF3C7" />
+  <!-- หินส่วนหัว -->
+  <rect x="45" y="15" width="30" height="20" rx="2" fill="#1F2937" />
+  <rect x="52" y="22" width="16" height="4" fill="#DC2626" />
+</svg>

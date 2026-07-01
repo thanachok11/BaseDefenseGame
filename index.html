@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#87CEEB" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Kingshot — Forest Defense</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- LOADING -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">👑</div>
+      <h1>Kingshot</h1>
+      <div class="loading-bar-wrap">
+        <div id="loading-bar"></div>
+      </div>
+      <p id="loading-text">กำลังเตรียมป่าและทะเล…</p>
+    </div>
+  </div>
+
+  <!-- LOGIN (หน้าหลัก) -->
+  <div id="login-screen" class="hidden">
+    <div class="login-bg" aria-hidden="true">
+      <span class="login-cloud login-cloud-1"></span>
+      <span class="login-cloud login-cloud-2"></span>
+      <span class="login-cloud login-cloud-3"></span>
+      <span class="login-sparkle login-sparkle-1">✦</span>
+      <span class="login-sparkle login-sparkle-2">✦</span>
+      <span class="login-sparkle login-sparkle-3">✦</span>
+      <span class="login-hill login-hill-l"></span>
+      <span class="login-hill login-hill-r"></span>
+    </div>
+
+    <div class="login-scene">
+      <aside id="score-board" class="score-board" aria-label="ป้ายประกาศอันดับคะแนน">
+        <div class="score-board-frame">
+          <div class="score-board-pin score-board-pin-l"></div>
+          <div class="score-board-pin score-board-pin-r"></div>
+          <div class="score-board-tape"></div>
+          <header class="score-board-header">
+            <div class="score-board-badge">🏆</div>
+            <h2 class="score-board-title">ป้ายประกาศ</h2>
+            <p class="score-board-sub">รวมคะแนนทุกครั้งที่เล่น · Top 5</p>
+          </header>
+          <div class="score-board-columns" aria-hidden="true">
+            <span>#</span>
+            <span>ผู้เล่น</span>
+            <span>รวมคะแนน</span>
+          </div>
+          <ol id="leaderboard-list" class="score-board-list">
+            <li class="score-board-empty">กำลังโหลด…</li>
+          </ol>
+        </div>
+      </aside>
+
+      <div class="auth-card bright-card login-card">
+        <div class="login-card-accent"></div>
+        <div class="auth-logo-wrap">
+          <div class="auth-logo">👑</div>
+        </div>
+        <h1 class="auth-title">Kingshot</h1>
+        <p class="auth-sub">ปกป้องป้อม · เล่นกับเพื่อน · ขึ้นอันดับ</p>
+        <div id="login-error" class="auth-error hidden"></div>
+        <div class="auth-fields">
+          <label class="auth-field">
+            <span class="auth-field-icon">👤</span>
+            <input id="login-username" class="auth-input" type="text" placeholder="ชื่อผู้ใช้" maxlength="16" autocomplete="username" />
+          </label>
+          <label class="auth-field">
+            <span class="auth-field-icon">🔒</span>
+            <input id="login-password" class="auth-input" type="password" placeholder="รหัสผ่าน" maxlength="32" autocomplete="current-password" />
+          </label>
+        </div>
+        <button id="login-btn" class="btn-play">เข้าสู่ระบบ</button>
+        <button id="register-btn" class="btn-secondary">สมัครสมาชิก</button>
+        <div class="auth-divider"><span>หรือ</span></div>
+        <button id="guest-btn" class="btn-ghost btn-guest">เล่นแบบ Guest</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN MENU -->
+  <div id="main-menu" class="hidden">
+    <div class="menu-scene">
+      <div class="menu-content bright-card">
+        <div class="menu-logo">👑</div>
+        <h1 class="game-title">Kingshot</h1>
+        <p class="welcome-text">ยินดีต้อนรับ, <strong id="menu-username">Guest</strong></p>
+        <p class="subtitle">ปกป้องป้อม · บริหารเงิน · เลือกเป้าเอง · เล่นได้ไม่จำกัด</p>
+        <button id="solo-btn" class="btn-play">▶ เล่นคนเดียว</button>
+        <button id="continue-btn" class="btn-play hidden">▶ เล่นต่อ</button>
+        <button id="multi-btn" class="btn-secondary">👥 เล่นหลายคน</button>
+        <button id="logout-btn" class="btn-ghost">ออกจากระบบ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MULTIPLAYER LOBBY -->
+  <div id="lobby-screen" class="hidden">
+    <div class="auth-card bright-card lobby-card">
+      <h2 class="auth-title">ห้องร่วมเล่น</h2>
+      <p class="auth-sub">สร้างห้องหรือเข้าร่วมด้วยรหัส 4 ตัว</p>
+      <div id="lobby-error" class="auth-error hidden"></div>
+
+      <div class="lobby-actions">
+        <button id="create-room-btn" class="btn-play">สร้างห้องใหม่</button>
+        <div class="join-row">
+          <input id="room-code-input" class="auth-input room-code-input" type="text" placeholder="รหัสห้อง"
+            maxlength="4" />
+          <button id="join-room-btn" class="btn-secondary">เข้าร่วม</button>
+        </div>
+      </div>
+
+      <div id="room-panel" class="room-panel hidden">
+        <div class="room-code-display">
+          รหัสห้อง: <strong id="room-code-display">----</strong>
+        </div>
+        <p class="room-hint">แชร์รหัสนี้ให้เพื่อนเปิดแท็บใหม่แล้วกดเข้าร่วม</p>
+        <ul id="player-list" class="player-list"></ul>
+        <button id="start-mp-btn" class="btn-play hidden">เริ่มเกม!</button>
+        <button id="leave-room-btn" class="btn-ghost">ออกจากห้อง</button>
+      </div>
+
+      <button id="back-menu-btn" class="btn-ghost">← กลับเมนู</button>
+    </div>
+  </div>
+
+  <!-- GAME -->
+  <div id="game-container" class="hidden">
+
+    <!-- Game HUD -->
+    <header id="game-hud">
+      <div class="hud-primary">
+        <div class="hud-left">
+          <div class="wave-pill" id="wave-badge">WAVE 1</div>
+          <div class="wave-sub" id="wave-sub">ศัตรู: 0</div>
+        </div>
+        <div class="hud-stats">
+          <div class="stat-pill coin-pill">
+            <span class="stat-icon">🪙</span>
+            <span id="hud-coins" class="mono stat-val">0</span>
+          </div>
+          <div class="stat-pill stone-pill">
+            <span class="stat-icon">🪨</span>
+            <span id="hud-stone" class="mono stat-val">0</span>
+          </div>
+          <div class="stat-pill score-pill">
+            <span class="stat-icon">⭐</span>
+            <span id="hud-score" class="mono stat-val">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="hud-secondary">
+        <span id="hud-time" class="mono hud-time">00:00</span>
+        <div id="mp-players" class="mp-players"></div>
+        <div class="hp-mini">
+          <span class="hp-label">🏰</span>
+          <div class="hp-track-mini">
+            <div id="base-hp-fill" class="hp-fill"></div>
+          </div>
+          <span id="hud-hp-text" class="mono hp-text">200/200</span>
+        </div>
+      </div>
+    </header>
+
+    <div id="game-play-area">
+      <canvas id="game-canvas"></canvas>
+
+      <!-- Mobile: virtual joystick (ซ้ายมือ) -->
+      <div id="mobile-controls" class="mobile-controls hidden" aria-hidden="true">
+        <div id="move-joystick" class="move-joystick" aria-label="ปุ่มเดิน">
+          <div class="joystick-base">
+            <div class="joystick-stick" id="joystick-stick"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="wave-announcement" class="hidden" aria-live="assertive">
+        <div id="wave-ann-text"></div>
+      </div>
+
+      <div id="wave-countdown" class="hidden">
+        <span>ด่านถัดไปใน <strong id="countdown-num">7</strong> วิ</span>
+      </div>
+
+      <div id="pause-overlay" class="hidden">
+        <div class="pause-card bright-card">
+          <div class="pause-icon">⏸</div>
+          <h2>หยุดชั่วคราว</h2>
+          <p id="pause-hint" class="pause-hint">กด Space หรือ Esc เพื่อเล่นต่อ</p>
+          <div class="pause-actions">
+            <button id="pause-resume-btn" class="btn-play">▶ เล่นต่อ</button>
+            <button id="pause-quit-btn" class="btn-ghost btn-quit">🚪 ออกจากเกม</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile: บังคับหมุนจอแนวนอน -->
+    <div id="rotate-overlay" class="rotate-overlay hidden" aria-live="polite">
+      <div class="rotate-card">
+        <div class="rotate-phone" aria-hidden="true">📱</div>
+        <h2>หมุนจอเป็นแนวนอน</h2>
+        <p>เกมนี้เล่นในโหมดแนวนอนเท่านั้น</p>
+      </div>
+    </div>
+
+    <!-- Bottom action bar -->
+    <footer id="bottom-hud">
+      <button id="base-upgrade-btn" class="btn-action">🏰 อัพเกรดฐาน</button>
+      <button id="pause-btn" class="btn-action btn-pause">⏸ หยุด</button>
+      <button id="upgrade-btn" class="btn-action btn-upgrade">⚡ อัพเกรด</button>
+    </footer>
+
+    <!-- Base upgrade panel (weapons + turrets at base) -->
+    <aside id="base-panel" class="side-panel hidden">
+      <div class="panel-header">
+        <h2>🏰 อาวุธ & ป้อมที่ฐาน</h2>
+        <button id="close-base-panel" class="btn-icon-close">✕</button>
+      </div>
+      <div id="base-panel-list"></div>
+    </aside>
+
+    <!-- General upgrade panel -->
+    <aside id="upgrade-panel" class="side-panel hidden">
+      <div class="panel-header">
+        <h2>⚡ อัพเกรดทั่วไป</h2>
+        <button id="close-upgrades" class="btn-icon-close">✕</button>
+      </div>
+      <div id="upgrade-list"></div>
+    </aside>
+
+  </div>
+
+  <!-- VICTORY -->
+  <div id="victory-screen" class="hidden">
+    <div class="end-card bright-card victory-card">
+      <div class="end-icon">🏆</div>
+      <h1>ชนะแล้ว!</h1>
+      <p>ป้องกันครบ 10 ด่าน</p>
+      <div class="stat-grid">
+        <div class="stat-row"><span>เวลา</span><strong id="victory-time">00:00</strong></div>
+        <div class="stat-row"><span>สังหาร</span><strong id="victory-kills">0</strong></div>
+        <div class="stat-row"><span>คะแนน</span><strong id="victory-score" class="accent-val">0</strong></div>
+      </div>
+      <button id="victory-restart-btn" class="btn-play">เล่นอีกครั้ง</button>
+    </div>
+  </div>
+
+  <!-- GAME OVER -->
+  <div id="game-over-screen" class="hidden">
+    <div class="end-card bright-card">
+      <div class="end-icon">💀</div>
+      <h1 class="fail-title">ป้อมแตก!</h1>
+      <div class="stat-grid">
+        <div class="stat-row"><span>เวลา</span><strong id="final-time">00:00</strong></div>
+        <div class="stat-row"><span>ด่าน</span><strong id="final-waves">0</strong></div>
+        <div class="stat-row"><span>สังหาร</span><strong id="final-kills">0</strong></div>
+        <div class="stat-row"><span>คะแนน</span><strong id="final-score" class="accent-val">0</strong></div>
+      </div>
+      <button id="restart-btn" class="btn-play">ลองใหม่</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="kingshot-session.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- เงาใต้ฐานอาคาร (Flat Shadow) -->
+  <ellipse cx="50" cy="92" rx="42" ry="10" fill="rgba(0,0,0,0.15)" />
+
+  <!-- ฐานหินทรงกลม (Circular Stone Pad) -->
+  <path d="M 10 82 L 10 86 Q 50 100 90 86 L 90 82 Z" fill="#78716C" />
+  <ellipse cx="50" cy="82" rx="40" ry="12" fill="#9CA3AF" />
+
+  <!-- ผนังไม้หลักของอาคาร (Wooden Walls) -->
+  <rect x="25" y="45" width="50" height="35" fill="#92400E" />
+  
+  <!-- ลายไม้บนผนัง (Wood Planks Detail) -->
+  <path d="M 35 45 L 35 80 M 45 45 L 45 80 M 55 45 L 55 80 M 65 45 L 65 80" stroke="#78350F" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- ฐานกำแพงหินผสมไม้ (Stone Base Mix at the bottom) -->
+  <path d="M 23 70 L 77 70 L 77 82 L 23 82 Z" fill="#64748B" />
+  <path d="M 23 70 L 77 70 L 77 73 L 23 73 Z" fill="#94A3B8" /> <!-- ขอบหินรับแสง -->
+  <!-- ลายบล็อกหิน -->
+  <path d="M 35 70 L 35 82 M 45 73 L 45 82 M 55 70 L 55 82 M 65 73 L 65 82" stroke="#475569" stroke-width="1.5" />
+
+  <!-- โครงหลังคาด้านหลังทรงสูง (Back Wizard Roof Structure) -->
+  <polygon points="15,45 50,15 85,45" fill="#7C3AED" />
+
+  <!-- หน้าจั่วอาคารทรงสูง (Front Tall Gable) -->
+  <polygon points="25,45 50,15 75,45" fill="#92400E" />
+  <line x1="50" y1="15" x2="50" y2="45" stroke="#78350F" stroke-width="1.5" />
+  <line x1="40" y1="27" x2="40" y2="45" stroke="#78350F" stroke-width="1.5" />
+  <line x1="60" y1="27" x2="60" y2="45" stroke="#78350F" stroke-width="1.5" />
+
+  <!-- ขอบหลังคาสีม่วงทรงพ่อมด (Purple Accent Wizard Roof Trim) -->
+  <path d="M 12 48 L 50 8 L 88 48 L 82 52 L 50 18 L 18 52 Z" fill="#A78BFA" />
+  <path d="M 18 52 L 50 18 L 82 52 L 76 56 L 50 28 L 24 56 Z" fill="#8B5CF6" opacity="0.6" /> <!-- เลเยอร์เงาใต้หลังคา -->
+
+  <!-- กรอบประตูโค้งมน (Arched Door) -->
+  <path d="M 40 82 L 40 60 Q 50 52 60 60 L 60 82 Z" fill="#431407" />
+  <path d="M 43 82 L 43 62 Q 50 56 57 62 L 57 82 Z" fill="#290E04" />
+  
+  <!-- สัญลักษณ์เวทมนตร์ในความมืดของประตู (Arcane Symbol) -->
+  <polygon points="50,62 53,68 47,68" fill="#10B981" opacity="0.8" />
+  <circle cx="50" cy="72" r="1.5" fill="#10B981" opacity="0.8" />
+
+  <!-- หน้าต่างวงกลมเรืองแสง (Glowing Arcane Window) -->
+  <circle cx="50" cy="36" r="7" fill="#1F2937" />
+  <circle cx="50" cy="36" r="4" fill="#10B981" />
+  <!-- กรอบหน้าต่างสีม่วง -->
+  <circle cx="50" cy="36" r="7" fill="none" stroke="#A78BFA" stroke-width="2" />
+
+  <!-- คริสตัลเวทมนตร์บนยอดหลังคา (Glowing Crystal Orb on Top) -->
+  <!-- ออร่าสีเขียว -->
+  <circle cx="50" cy="6" r="12" fill="#10B981" opacity="0.2" />
+  <circle cx="50" cy="6" r="6" fill="#10B981" opacity="0.4" />
+  <!-- ตัวคริสตัล -->
+  <polygon points="50,0 54,6 50,12 46,6" fill="#34D399" />
+  <polygon points="50,0 50,12 46,6" fill="#A7F3D0" /> <!-- ไฮไลท์แสง -->
+
+  <!-- ประกายเวทมนตร์ลอยตัว (Floating Magic Sparkles) -->
+  <circle cx="28" cy="55" r="2" fill="#10B981" />
+  <circle cx="24" cy="63" r="1.2" fill="#34D399" />
+  <circle cx="72" cy="48" r="2" fill="#10B981" />
+  <circle cx="78" cy="56" r="1.5" fill="#34D399" />
+</svg>

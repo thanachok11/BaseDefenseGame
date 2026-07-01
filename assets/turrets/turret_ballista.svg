@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- เงาใต้ฐาน (Flat Shadow สีเทา/ดำโปร่งแสง) -->
+  <ellipse cx="64" cy="115" rx="36" ry="12" fill="rgba(0,0,0,0.15)" />
+
+  <!-- ฐานหินทรงกลม (Circular Stone Base) -->
+  <path d="M 32 100 L 32 106 Q 64 118 96 106 L 96 100 Z" fill="#57534E" /> <!-- เงาด้านล่างของหิน -->
+  <ellipse cx="64" cy="100" rx="32" ry="12" fill="#78716C" />
+  <ellipse cx="64" cy="100" rx="24" ry="8" fill="#A8A29E" /> <!-- ไฮไลท์ด้านบน -->
+
+  <!-- ตัวหอคอยไม้ (Wooden Watchtower Body) -->
+  <path d="M 44 60 L 36 100 Q 64 110 92 100 L 84 60 Z" fill="#92400E" />
+  <path d="M 44 60 L 36 100 Q 64 105 92 100 L 84 60 Z" fill="#78350F" opacity="0.3" /> <!-- เลเยอร์แสงเงาแบบ Flat -->
+  <!-- ลวดลายรอยต่อไม้แบบมินิมอล -->
+  <line x1="56" y1="60" x2="52" y2="103" stroke="#78350F" stroke-width="2" />
+  <line x1="72" y1="60" x2="76" y2="103" stroke="#78350F" stroke-width="2" />
+
+  <!-- แท่นยืนด้านบน (Tower Platform) -->
+  <path d="M 32 60 L 96 60 L 86 70 L 42 70 Z" fill="#B45309" />
+  <path d="M 42 70 L 86 70 L 86 76 L 42 76 Z" fill="#78350F" />
+  
+  <!-- แกนหมุนของบาลิสต้า (Base Swivel) -->
+  <ellipse cx="64" cy="58" rx="16" ry="6" fill="#78716C" />
+  <rect x="58" y="52" width="12" height="6" fill="#374151" />
+
+  <!-- หน้าไม้/อาวุธบาลิสต้า (Ballista Bow & Barrel) -->
+  <!-- แขนหน้าไม้ทำจากไม้แข็ง -->
+  <path d="M 20 40 Q 64 25 108 40 L 104 46 Q 64 35 24 46 Z" fill="#92400E" />
+  
+  <!-- ลำกล้องเหล็กหนา (Dark Metal Barrel) -->
+  <rect x="54" y="28" width="20" height="32" rx="4" fill="#374151" />
+  <rect x="56" y="24" width="16" height="8" rx="2" fill="#4B5563" />
+  <!-- รางเลื่อนศร (Central Track) -->
+  <rect x="62" y="24" width="4" height="34" fill="#1F2937" />
+
+  <!-- ลูกศรยักษ์ (Giant Bolt/Arrow) -->
+  <rect x="63" y="10" width="2" height="20" fill="#E5E7EB" />
+  <path d="M 60 14 L 64 4 L 68 14 Z" fill="#9CA3AF" />
+
+  <!-- ธงประดับสีเขียวประจำทีม (Accent Green Flag) -->
+  <!-- เสาธง -->
+  <rect x="28" y="44" width="4" height="40" rx="2" fill="#78350F" />
+  <!-- ตัวผ้าธง (สีเขียวคลีนๆ ไม่มีลวดลายทแยงดำ) -->
+  <path d="M 32 46 L 12 52 L 32 58 Z" fill="#10B981" />
+  <path d="M 32 46 L 22 52 L 32 58 Z" fill="#059669" /> <!-- เงาพับของธง -->
+  <!-- หัวเสาธงสีทอง -->
+  <circle cx="30" cy="44" r="4" fill="#FBBF24" />
+</svg>

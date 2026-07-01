@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <ellipse cx="60" cy="105" rx="35" ry="12" fill="rgba(0,0,0,0.15)" />
+  <!-- หอกมังกรเพลิง (Dragon Lance) -->
+  <rect x="85" y="10" width="6" height="85" rx="2" fill="#4B5563" />
+  <path d="M 82 25 L 88 5 L 94 25 Z" fill="#DC2626" />
+  <path d="M 88 5 L 88 25" stroke="#F59E0B" stroke-width="2" />
+  <!-- ปีกมังกรที่หลัง (หุบอยู่) -->
+  <path d="M 40 45 Q 10 20 20 70 Q 30 50 40 60 Z" fill="#7F1D1D" />
+  <path d="M 80 45 Q 110 20 100 70 Q 90 50 80 60 Z" fill="#7F1D1D" />
+  <!-- ลำตัวชุดเกราะเกล็ดมังกร -->
+  <rect x="35" y="45" width="50" height="45" rx="8" fill="#B91C1C" />
+  <path d="M 35 55 L 85 55" stroke="#991B1B" stroke-width="2" />
+  <path d="M 35 65 L 85 65" stroke="#991B1B" stroke-width="2" />
+  <path d="M 35 75 L 85 75" stroke="#991B1B" stroke-width="2" />
+  <!-- หมวกเกราะหัวมังกร (Dragon Helmet) -->
+  <rect x="40" y="20" width="40" height="30" rx="5" fill="#111827" />
+  <path d="M 40 25 Q 30 10 35 20 Z" fill="#F59E0B" /> <!-- เขาซ้าย -->
+  <path d="M 80 25 Q 90 10 85 20 Z" fill="#F59E0B" /> <!-- เขาขวา -->
+  <rect x="45" y="30" width="30" height="8" rx="2" fill="#F59E0B" /> <!-- ขากรรไกรมังกร -->
+  <circle cx="50" cy="25" r="3" fill="#DC2626" />
+  <circle cx="70" cy="25" r="3" fill="#DC2626" />
+</svg>
