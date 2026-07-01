@@ -3,8 +3,14 @@
 const fs = require('fs');
 const path = require('path');
 
+const ROOT = path.join(__dirname, '..');
+const PUBLIC = path.join(ROOT, 'public');
+
+const DEPLOY_FILES = ['index.html', 'style.css', 'game.js', 'kingshot-session.js'];
+const DEPLOY_DIRS = ['assets'];
+
 function loadEnvFile() {
-  const envPath = path.join(__dirname, '..', '.env');
+  const envPath = path.join(ROOT, '.env');
   if (!fs.existsSync(envPath)) return;
 
   for (const line of fs.readFileSync(envPath, 'utf8').split('\n')) {
@@ -28,6 +34,21 @@ function loadEnvFile() {
   }
 }
 
+function copyFile(src, dest) {
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.copyFileSync(src, dest);
+}
+
+function copyDir(src, dest) {
+  fs.mkdirSync(dest, { recursive: true });
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) copyDir(srcPath, destPath);
+    else copyFile(srcPath, destPath);
+  }
+}
+
 loadEnvFile();
 
 const url = process.env.SUPABASE_URL;
@@ -40,13 +61,26 @@ if (!url || !key) {
   process.exit(1);
 }
 
-const output = `'use strict';
+const configJs = `'use strict';
 
 /* Generated at build time — do not edit manually. */
 const SUPABASE_URL = ${JSON.stringify(url)};
 const SUPABASE_ANON_KEY = ${JSON.stringify(key)};
 `;
 
-const outPath = path.join(__dirname, '..', 'supabase-config.js');
-fs.writeFileSync(outPath, output);
+if (fs.existsSync(PUBLIC)) fs.rmSync(PUBLIC, { recursive: true, force: true });
+fs.mkdirSync(PUBLIC, { recursive: true });
+
+for (const file of DEPLOY_FILES) {
+  copyFile(path.join(ROOT, file), path.join(PUBLIC, file));
+}
+
+for (const dir of DEPLOY_DIRS) {
+  copyDir(path.join(ROOT, dir), path.join(PUBLIC, dir));
+}
+
+fs.writeFileSync(path.join(PUBLIC, 'supabase-config.js'), configJs);
+fs.writeFileSync(path.join(ROOT, 'supabase-config.js'), configJs);
+
+console.log('Built public/ for Vercel deploy');
 console.log('Generated supabase-config.js');
