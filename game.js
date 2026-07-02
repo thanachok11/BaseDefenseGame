@@ -2325,8 +2325,10 @@ function getWaveBossScale(wave) {
 function buildSpawnQueue(wave) {
   const w = Math.max(1, wave);
 
-  let normal = Math.floor(28 + (w - 1) * 1.25);
-  let armored = w >= 4 ? Math.floor((w - 3) * 0.42) : 0;
+  let normal = w <= 10
+    ? Math.floor(16 + (w - 1) * 0.85)
+    : Math.floor(24 + (w - 10) * 1.5);
+  let armored = w >= 6 ? Math.floor((w - 5) * 0.32) : 0;
   let boss = w % 5 === 0 ? Math.min(3, 1 + Math.floor((w - 5) / 15)) : 0;
 
   const queue = [];
@@ -2342,7 +2344,7 @@ function buildSpawnQueue(wave) {
 
 function getSpawnInterval(wave) {
   const w = Math.max(1, wave);
-  return Math.max(0.22, 1.55 - w * 0.032);
+  return Math.max(0.18, 1.3 - w * 0.042);
 }
 
 function spawnEnemyOnPath(entry) {
@@ -2380,7 +2382,7 @@ function tickWave(dt) {
   if (GS.spawnIdx >= GS.spawnQueue.length && GS.enemies.length === 0) {
     GS.score += GS.wave * 50;
     GS.wavePhase = 'rest';
-    GS.restTimer = 5;
+    GS.restTimer = 3;
     document.getElementById('wave-countdown').classList.remove('hidden');
   }
 }
