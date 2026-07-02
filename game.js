@@ -685,8 +685,8 @@ class Player {
     this.size = 30;
     this._phase = 0;
     this.atkRange = 145;
-    this.atkDmg = 22;
-    this.atkSpeed = 0.9;
+    this.atkDmg = 40;
+    this.atkSpeed = 0.95;
     this.atkTimer = 0;
     this.atkFlash = 0;
     this.dmgBonus = 0;
@@ -961,28 +961,34 @@ class Enemy {
     this._wobble = 0;
     this.reachedBase = false;
 
-    const waveMult = 1 + (wave - 1) * 0.12;
-    const timeMult = 1 + (GS.timeSurvived || 0) * 0.004;
-    const scale = waveMult * timeMult;
+    const w = Math.max(1, wave);
+    const mobMult = getWaveMobScale(w);
+    const bossMult = getWaveBossScale(w);
+    const timeMult = 1 + (GS.timeSurvived || 0) * 0.003;
+    const scale = mobMult * timeMult;
+    const bossScale = bossMult * timeMult;
+    const wStep = w - 1;
 
     switch (type) {
       case 'normal':
-        this.hp = Math.round(32 * scale); this.maxHp = this.hp;
-        this.speed = 80 + (wave - 1) * 2; this.atk = 8 * (1 + (wave - 1) * 0.08) * timeMult;
+        this.hp = Math.round(28 * scale); this.maxHp = this.hp;
+        this.speed = 78 + wStep * 1.4; this.atk = (7 + wStep * 0.35) * timeMult;
         this.atkRate = 1.0; this.radius = 24;
-        this.coinDrop = 3; this.score = 10;
+        this.coinDrop = 4; this.score = 10;
         break;
       case 'armored':
-        this.hp = Math.round(95 * scale); this.maxHp = this.hp;
-        this.speed = 52 + (wave - 1) * 1.5; this.atk = 16 * (1 + (wave - 1) * 0.08) * timeMult;
+        this.hp = Math.round(78 * scale); this.maxHp = this.hp;
+        this.speed = 50 + wStep * 1.1; this.atk = (13 + wStep * 0.55) * timeMult;
         this.atkRate = 0.65; this.radius = 34;
-        this.coinDrop = 8; this.score = 28;
+        this.coinDrop = 7; this.score = 28;
         break;
       case 'boss':
-        this.hp = Math.round(650 * scale); this.maxHp = this.hp;
-        this.speed = 34 + (wave - 1); this.atk = 28 * (1 + (wave - 1) * 0.06) * timeMult;
-        this.atkRate = 0.45; this.radius = 68;
-        this.coinDrop = 60; this.score = 220;
+        this.hp = Math.round(460 * bossScale); this.maxHp = this.hp;
+        this.speed = 32 + wStep * 0.75; this.atk = (22 + wStep * 0.85) * timeMult;
+        this.atkRate = Math.max(0.35, 0.45 - wStep * 0.003);
+        this.radius = 68;
+        this.coinDrop = Math.floor(45 + wStep * 1.2);
+        this.score = Math.floor(200 + wStep * 12);
         this.bossKey = opts.bossKey || getBossAssetKey(wave, opts.bossSlot || 0);
         break;
     }
@@ -2306,16 +2312,24 @@ function setupInput() {
 // SECTION 7 — WAVE / SPAWN SYSTEM (ENDLESS)
 // ============================================================
 
+function getWaveMobScale(wave) {
+  const w = Math.max(1, wave);
+  return 1 + (w - 1) * 0.06;
+}
+
+function getWaveBossScale(wave) {
+  const w = Math.max(1, wave);
+  return 1 + (w - 1) * 0.085;
+}
+
 function buildSpawnQueue(wave) {
-  const cycle = ((wave - 1) % 5) + 1;
-  const tier = Math.floor((wave - 1) / 5);
-  const tm = 1 + tier * 0.45;
+  const w = Math.max(1, wave);
 
-  let normal = Math.floor((6 + cycle * 2) * tm);
-  let armored = Math.floor(Math.max(0, cycle - 1) * 2 * tm);
-  let boss = cycle === 5 ? Math.min(1 + tier, 4) : 0;
+  let normal = Math.floor(28 + (w - 1) * 1.25);
+  let armored = w >= 4 ? Math.floor((w - 3) * 0.42) : 0;
+  let boss = w % 5 === 0 ? Math.min(3, 1 + Math.floor((w - 5) / 15)) : 0;
 
-  let queue = [];
+  const queue = [];
   for (let i = 0; i < boss; i++) queue.push({ type: 'boss', path: i % 3, bossSlot: i });
   for (let i = 0; i < normal; i++) queue.push({ type: 'normal', path: Math.floor(Math.random() * 3) });
   for (let i = 0; i < armored; i++) queue.push({ type: 'armored', path: Math.floor(Math.random() * 3) });
@@ -2327,7 +2341,8 @@ function buildSpawnQueue(wave) {
 }
 
 function getSpawnInterval(wave) {
-  return Math.max(0.35, 2.0 - wave * 0.06);
+  const w = Math.max(1, wave);
+  return Math.max(0.22, 1.55 - w * 0.032);
 }
 
 function spawnEnemyOnPath(entry) {
